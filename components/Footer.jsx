@@ -23,7 +23,15 @@ import MuiLink from '@mui/material/Link';
 
 const Footer = () => {
   return (
-    <Box component="footer" sx={{ py: 5, bgcolor: '#40464d' }}>
+    <Box
+      component="footer"
+      sx={{
+        py: 5,
+        bgcolor: '#40464d',
+        textDecoration: 'none',
+        color: 'common.white',
+      }}
+    >
       <Container maxwidth="sm">
         {/* Logo Grid */}
         <Grid>
