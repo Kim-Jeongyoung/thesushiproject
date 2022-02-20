@@ -15,6 +15,9 @@ import { Container, Grid, Typography } from '@mui/material';
 
 //Add logo in the middle 2/19
 import FooterLogo from '../public/footer/footer_rollinlogo_white.svg';
+import Email from '../public/footer/email.svg';
+import Phone from '../public/footer/phone.svg';
+
 import IconButton from '@mui/material/IconButton';
 import NextLink from 'next/link';
 import MuiLink from '@mui/material/Link';
@@ -51,7 +54,7 @@ const Footer = () => {
                   alt="logo"
                   layout="responsive"
                   width={195.18}
-                  height={23.86} ??
+                  height={23.86} 
                 /> */}
                 <FooterLogo />
               </MuiNextLink>
@@ -63,8 +66,20 @@ const Footer = () => {
           <Grid container spacing={2} direction="row">
             <Grid item xs={8}>
               <Box>CONTACT US</Box>
-              <Box sx={{ py: 1 }}>Email info@rollinsushi.com</Box>
-              <Box>Phone 956-249-0167</Box>
+              <Box sx={{ py: 1 }}></Box>
+              {/* <Box>Email 956-249-0167</Box> */}
+              <Box>
+                {/* <Link href="mailto:info@rollinsushi.com"> */}
+                <Email />
+                {/* </Link> */}
+              </Box>
+              <Box>
+                {/* <Link href="mailto:info@rollinsushi.com"> */}
+                <Phone />
+                {/* </Link> */}
+              </Box>
+
+              {/* <Box>Phone 956-249-0167</Box> */}
             </Grid>
 
             {/* Follow on us Grid */}
@@ -388,4 +403,25 @@ export default Footer;
         </Grid>
       </Container>
     </Box> */
+}
+
+// 2/20 svg image
+{
+  /* <Image
+                  src="/footer_rollinlogo_white.svg"
+                  alt="logo"
+                  layout="responsive"
+                  width={205}
+                  height={35}
+                /> */
+}
+
+{
+  /* <Image
+                      src="/footer/email-icon.svg"
+                      alt="Phone"
+                      layout="responsive"
+                      width={29}
+                      height={29}
+                    /> */
 }
