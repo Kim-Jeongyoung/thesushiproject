@@ -1,6 +1,6 @@
-import { Button, Container, Grid, Typography } from "@mui/material";
-import Image from "next/image";
-import MuiNextLink from "@components/MuiNextLink";
+import { Button, Container, Grid, Typography } from '@mui/material';
+import Image from 'next/image';
+import MuiNextLink from '@components/MuiNextLink';
 
 const SectionAbout = () => {
   return (
@@ -49,3 +49,24 @@ const SectionAbout = () => {
 };
 
 export default SectionAbout;
+
+// 2/20 svg image
+{
+  /* <Image
+                  src="/footer_rollinlogo_white.svg"
+                  alt="logo"
+                  layout="responsive"
+                  width={205}
+                  height={35}
+                /> */
+}
+
+{
+  /* <Image
+                      src="/footer/email-icon.svg"
+                      alt="Phone"
+                      layout="responsive"
+                      width={29}
+                      height={29}
+                    /> */
+}
