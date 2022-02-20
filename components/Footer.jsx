@@ -39,6 +39,8 @@ const Footer = () => {
           direction="column"
           justifyContent="center"
           alignItems="center"
+          // margin bottom
+          sx={{ pb: 2 }}
         >
           <Grid item sx={12}>
             <Box sx={{ align: 'center' }}>
