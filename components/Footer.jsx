@@ -51,7 +51,7 @@ const Footer = () => {
           <Grid container spacing={2} direction="row">
             <Grid item xs={8}>
               <Box>CONTACT US</Box>
-              <Box>Email info@rollinsushi.com</Box>
+              <Box sx={{ py: 1 }}>Email info@rollinsushi.com</Box>
               <Box>Phone 956-249-0167</Box>
             </Grid>
 
@@ -59,7 +59,34 @@ const Footer = () => {
 
             <Grid item xs={4}>
               <Box>Follow on Us</Box>
-              <Box>social icons</Box>
+              <Box>
+                <Stack direction="row" spacing={5} sx={{ mb: 5, py: 2 }}>
+                  <MuiNextLink
+                    sx={{ textDecoration: 'none', color: 'common.white' }}
+                    href="https://YourInstagramLink/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Instagram fontSize="large" />
+                  </MuiNextLink>
+                  <MuiNextLink
+                    sx={{ textDecoration: 'none', color: 'common.white' }}
+                    href="https://YourFacebookLink/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Facebook fontSize="large" />
+                  </MuiNextLink>
+                  <MuiNextLink
+                    sx={{ textDecoration: 'none', color: 'common.white' }}
+                    href="https://YourTwitterLink/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Twitter fontSize="large" />
+                  </MuiNextLink>
+                </Stack>
+              </Box>
             </Grid>
           </Grid>
         </Container>
@@ -269,3 +296,84 @@ export default Footer;
 //         </Grid>
 //       </Container>
 //     </Box>
+
+// 2/19 대략 틀 완성
+{
+  /* <Box
+      component="footer"
+      sx={{
+        py: 5,
+        bgcolor: '#40464d',
+        textDecoration: 'none',
+        color: 'common.white',
+      }}
+    >
+      <Container maxwidth="sm">
+        Logo Grid
+
+        <Grid
+          container
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Grid item sx={12}>
+            <Box sx={{ align: 'center' }}>
+              <FooterLogo />
+            </Box>
+          </Grid>
+        </Grid>
+        Second Grid with Contact and Follow on us
+
+        <Container>
+          <Grid container spacing={2} direction="row">
+            <Grid item xs={8}>
+              <Box>CONTACT US</Box>
+              <Box sx={{ py: 1 }}>Email info@rollinsushi.com</Box>
+              <Box>Phone 956-249-0167</Box>
+            </Grid>
+
+            Follow on us Grid
+
+            <Grid item xs={4}>
+              <Box>Follow on Us</Box>
+              <Box>
+                <Stack direction="row" spacing={5} sx={{ mb: 5, py: 2 }}>
+                  <MuiNextLink
+                    sx={{ textDecoration: 'none', color: 'common.white' }}
+                    href="https://YourInstagramLink/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Instagram fontSize="large" />
+                  </MuiNextLink>
+                  <MuiNextLink
+                    sx={{ textDecoration: 'none', color: 'common.white' }}
+                    href="https://YourFacebookLink/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Facebook fontSize="large" />
+                  </MuiNextLink>
+                  <MuiNextLink
+                    sx={{ textDecoration: 'none', color: 'common.white' }}
+                    href="https://YourTwitterLink/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Twitter fontSize="large" />
+                  </MuiNextLink>
+                </Stack>
+              </Box>
+            </Grid>
+          </Grid>
+        </Container>
+
+        <Grid>
+          <Typography align="center" color="common.white">
+            © 2022 Sushi Rollin'
+          </Typography>
+        </Grid>
+      </Container>
+    </Box> */
+}
