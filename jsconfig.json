@@ -1,3 +1,5 @@
+// Absolute Imports and Module path aliases
+
 {
   "compilerOptions": {
     "baseUrl": ".",

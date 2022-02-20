@@ -1,43 +1,162 @@
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Stack from "@mui/material/Stack";
-import { Facebook, Instagram, Twitter } from "@mui/icons-material";
-import MuiNextLink from "@components/MuiNextLink";
+import Box from '@mui/material/Box';
+// import Typography from '@mui/material/Typography';
+import Stack from '@mui/material/Stack';
+import {
+  CopyrightTwoTone,
+  Facebook,
+  Instagram,
+  Twitter,
+} from '@mui/icons-material';
+import MuiNextLink from '@components/MuiNextLink';
+
+//Added 2/19
+// import Container from '@mui/material/Container';
+import { Container, Grid, Typography } from '@mui/material';
+
+//Add logo in the middle 2/19
+import Logo from '../public/rollinlogowhite.svg';
+import IconButton from '@mui/material/IconButton';
+import NextLink from 'next/link';
+import MuiLink from '@mui/material/Link';
 
 const Footer = () => {
   return (
-    <Box component="footer" sx={{ py: 5, bgcolor: "#40464d" }}>
-      <Stack direction="row" justifyContent="center" spacing={4} sx={{ mb: 5 }}>
-        <MuiNextLink
-          sx={{ textDecoration: "none", color: "common.white" }}
-          href="https://YourFacebookLink/"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Box
+      component="footer"
+      sx={{
+        bgcolor: 'primary.main',
+        textDecoration: 'none',
+        color: 'common.white',
+        px: 1,
+      }}
+    >
+      <Container maxWidth="lg">
+        <Box textAlign="center">LOGO IMAGE</Box>
+        {/* centered logo */}
+        {/* <Box sx={{ align: 'center' }}>
+          <Container
+            maxWidth="lg"
+            sx={{
+              display: `flex`,
+              justifyContent: `center`,
+              alignItems: `center`,
+            }}
+          >
+            <IconButton edge="start" aria-label="home">
+              <MuiNextLink activeClassName="active" href="/">
+                <Logo />
+              </MuiNextLink>
+            </IconButton>
+          </Container>
+        </Box> */}
+
+        {/* 다시 코드 이해 필요 */}
+        <Grid
+          container
+          spacing={2}
+          direction="row"
+          justifyContent="space-between"
+          alignItmes="center"
         >
-          <Facebook fontSize="large" />
-        </MuiNextLink>
-        <MuiNextLink
-          sx={{ textDecoration: "none", color: "common.white" }}
-          href="https://YourInstagramLink/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Instagram fontSize="large" />
-        </MuiNextLink>
-        <MuiNextLink
-          sx={{ textDecoration: "none", color: "common.white" }}
-          href="https://YourTwitterLink/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Twitter fontSize="large" />
-        </MuiNextLink>
-      </Stack>
-      <Typography align="center" color="common.white">
-        © 2022 Sushi Rollin'
-      </Typography>
+          <Grid item xs={12} sm={6}>
+            <Box>
+              {/* <Link href="/" color="inherit"> */}
+              CONTACT US
+              {/* </Link> */}
+            </Box>
+            <Box>
+              {/* <Link href="/" color="inherit"> */}
+              Email info@rollinsushi.com
+              {/* </Link> */}
+            </Box>
+            <Box>Phone 956-249-0167</Box>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Box>FIND US ON</Box>
+            <Box component="span" sx={{ py: 1 }}>
+              {/* 아이콘 간격 줄이기 */}
+              <Stack
+                direction="row"
+                justifyContent="space-between"
+                spacing={1}
+                sx={{ mb: 5 }}
+              >
+                <MuiNextLink
+                  sx={{ textDecoration: 'none', color: 'common.white' }}
+                  href="https://YourFacebookLink/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Facebook fontSize="large" />
+                </MuiNextLink>
+                <MuiNextLink
+                  sx={{ textDecoration: 'none', color: 'common.white' }}
+                  href="https://YourInstagramLink/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Instagram fontSize="large" />
+                </MuiNextLink>
+                <MuiNextLink
+                  sx={{ textDecoration: 'none', color: 'common.white' }}
+                  href="https://YourTwitterLink/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Twitter fontSize="large" />
+                </MuiNextLink>
+              </Stack>
+            </Box>
+          </Grid>
+        </Grid>
+
+        <Typography align="center" color="common.white">
+          © 2022 Sushi Rollin'
+        </Typography>
+      </Container>
+
+      {/* <Stack direction="row" justifyContent="center" spacing={4} sx={{ mb: 5 }}> */}
+
+      {/* </Stack> */}
     </Box>
   );
 };
+
+//original footer
+// const Footer = () => {
+//   return (
+//     <Box component="footer" sx={{ py: 5, bgcolor: '#40464d' }}>
+//       <Stack direction="row" justifyContent="center" spacing={4} sx={{ mb: 5 }}>
+//         <MuiNextLink
+//           sx={{ textDecoration: 'none', color: 'common.white' }}
+//           href="https://YourFacebookLink/"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           <Facebook fontSize="large" />
+//         </MuiNextLink>
+//         <MuiNextLink
+//           sx={{ textDecoration: 'none', color: 'common.white' }}
+//           href="https://YourInstagramLink/"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           <Instagram fontSize="large" />
+//         </MuiNextLink>
+//         <MuiNextLink
+//           sx={{ textDecoration: 'none', color: 'common.white' }}
+//           href="https://YourTwitterLink/"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           <Twitter fontSize="large" />
+//         </MuiNextLink>
+//       </Stack>
+//       <Typography align="center" color="common.white">
+//         © 2022 Sushi Rollin'
+//       </Typography>
+//     </Box>
+//   );
+// };
 
 export default Footer;
