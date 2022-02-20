@@ -24,20 +24,21 @@ import MuiLink from '@mui/material/Link';
 const Footer = () => {
   return (
     <Box component="footer" sx={{ py: 5, bgcolor: '#40464d' }}>
-      <Container>
+      <Container maxwidth="sm">
         {/* Logo Grid */}
-        <Grid columns={3}>
+        <Grid>
           <Box sx={{ align: 'center' }}>
             <FooterLogo />
           </Box>
         </Grid>
         {/* Second Grid with Contact and Follow on us */}
-        <Grid>
-          <Grid>
+        <Grid container spacing={2}>
+          <Grid item xs={8}>
             <Grid container>
               <Grid item>
                 <Box>CONTACT US</Box>
                 <Box>Email info@rollinsushi.com</Box>
+                <Box>Phone 956-249-0167</Box>
               </Grid>
             </Grid>
           </Grid>
