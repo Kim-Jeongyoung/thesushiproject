@@ -14,12 +14,13 @@ import MuiNextLink from '@components/MuiNextLink';
 import { Container, Grid, Typography } from '@mui/material';
 
 //Add logo in the middle 2/19
-import FooterLogo from '../public/footer_rollinlogo_white.svg';
+import FooterLogo from '../public/footer/footer_rollinlogo_white.svg';
 import IconButton from '@mui/material/IconButton';
 import NextLink from 'next/link';
 import MuiLink from '@mui/material/Link';
 // import Image from 'next/image';
 // import Image from 'material-ui-image';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -27,7 +28,7 @@ const Footer = () => {
       component="footer"
       sx={{
         py: 5,
-        bgcolor: '#40464d',
+        bgcolor: '#262626',
         textDecoration: 'none',
         color: 'common.white',
       }}
@@ -40,11 +41,20 @@ const Footer = () => {
           justifyContent="center"
           alignItems="center"
           // margin bottom
-          sx={{ pb: 2 }}
+          sx={{ mb: 2 }}
         >
           <Grid item sx={12}>
             <Box sx={{ align: 'center' }}>
-              <FooterLogo />
+              <MuiNextLink href="/" underline="none">
+                {/* <Image
+                  src="/footer_rollinlogo_white.svg"
+                  alt="logo"
+                  layout="responsive"
+                  width={195.18}
+                  height={23.86} ??
+                /> */}
+                <FooterLogo />
+              </MuiNextLink>
             </Box>
           </Grid>
         </Grid>
@@ -60,7 +70,7 @@ const Footer = () => {
             {/* Follow on us Grid */}
 
             <Grid item xs={4}>
-              <Box>Follow on Us</Box>
+              <Box>FOLLOW ON US</Box>
               <Box>
                 <Stack direction="row" spacing={5} sx={{ mb: 5, py: 2 }}>
                   <MuiNextLink
