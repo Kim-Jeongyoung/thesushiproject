@@ -34,32 +34,36 @@ const Footer = () => {
     >
       <Container maxwidth="sm">
         {/* Logo Grid */}
-        <Grid>
-          <Box sx={{ align: 'center' }}>
-            <FooterLogo />
-          </Box>
+        <Grid
+          container
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Grid item sx={12}>
+            <Box sx={{ align: 'center' }}>
+              <FooterLogo />
+            </Box>
+          </Grid>
         </Grid>
         {/* Second Grid with Contact and Follow on us */}
-        <Grid container spacing={2}>
-          <Grid item xs={8}>
-            <Grid container>
-              <Grid item>
-                <Box>CONTACT US</Box>
-                <Box>Email info@rollinsushi.com</Box>
-                <Box>Phone 956-249-0167</Box>
-              </Grid>
+        <Container>
+          <Grid container spacing={2} direction="row">
+            <Grid item xs={8}>
+              <Box>CONTACT US</Box>
+              <Box>Email info@rollinsushi.com</Box>
+              <Box>Phone 956-249-0167</Box>
+            </Grid>
+
+            {/* Follow on us Grid */}
+
+            <Grid item xs={4}>
+              <Box>Follow on Us</Box>
+              <Box>social icons</Box>
             </Grid>
           </Grid>
-          {/* Follow on us Grid */}
-          <Grid>
-            <Grid container>
-              <Grid item>
-                <Box>Follow on Us</Box>
-                <Box>social icons</Box>
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
+        </Container>
+
         <Grid>
           <Typography align="center" color="common.white">
             © 2022 Sushi Rollin'
